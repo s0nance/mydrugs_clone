@@ -19,13 +19,26 @@
 <body>
 
   <!-- Heading Bar -->
-  <div class="mainHeader">
-    <nuxt-link class="Shop" to="/commandes">SHOP</nuxt-link>
-    <nuxt-link to="/faq">FAQ</nuxt-link>
-    <div><img class="img" src="~/assets/logo/White Logo.png"></div>
-    <nuxt-link to="/safety">SAFETY</nuxt-link>
-    <nuxt-link to="/contact">CONTACT</nuxt-link>
+  <div class="container">
+    <div class="mainHeader">
+      <div>
+        <nuxt-link class="link" to="/commandes">SHOP</nuxt-link>
+      </div>
+      <div>
+        <nuxt-link class="link" to="/faq">FAQ</nuxt-link>
+      </div>
+      <div>
+        <img class="img" src="~/assets/logo/White Logo.png">
+      </div>
+      <div>
+        <nuxt-link class="link" to="/safety">SAFETY</nuxt-link>
+      </div>
+      <div>
+        <nuxt-link class="link" to="/contact">CONTACT</nuxt-link>
+      </div>
+    </div>
   </div>
+
 
   <!-- The Carusel
   <div class="container">
@@ -36,27 +49,36 @@
     id="nextBtn" class="arrownxt" onclick="foward_slide()"></ion-icon>
   </div>
   -->
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="~/assets/logo/logo_main_page.png" class="d-block w-100" alt="...">
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="~/assets/logo/logo_main_page.png" alt="Los Angeles">
+      </div>
+      <div class="carousel-item">
+        <img src="~/assets/slide/Slide_Blue_Pill.jpg" alt="Chicago">
+      </div>
+      <div class="carousel-item">
+        <img src="ny.jpg" alt="New York">
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="~/assets/slide/Slide_Red_Pill.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="~/assets/slide/Slide_Blue_Pill.jpg" class="d-block w-100" alt="...">
-    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
 
 </body>
 </html>
@@ -79,8 +101,8 @@ body {
 }
 
 .mainHeader {
-  width: 100%;
   display: flex;
+  width: 100%;
   justify-content: space-around;
   font-size: 50px;
 }
@@ -88,31 +110,19 @@ body {
 .mainHeader div {
   text-align: center;
   width: 20%;
-  font-size: 16px;
-  font-size: 2.5vw;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-family: 'Roboto';
 }
 
-.mainLink {
-  text-align: center;
-  width: 20%;
-  text-decoration: none;
+.link {
   color: white;
-  font-weight: bold;
   font-family: 'Roboto';
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.Shop {
-  text-align: center;
-  width: 20%;
-  text-decoration: none;
+.link:hover {
   color: white;
-  font-weight: bold;
-  font-family: 'Roboto';
 }
+
 .img {
   width: 60px;
   position: fixed;
